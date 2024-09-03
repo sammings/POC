@@ -29,6 +29,7 @@ def poc(target):
         if '/login/login' in content:
             with open('result.txt','a',encoding='utf-8') as f:
                 f.write(target+'\n')
+                 print(f'[+]该{target}存在信息泄露漏洞')
         elif res1.status_code != 200:
             print(f'[+]该{target}可能存在问题请手动测试')
         else:
